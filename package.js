@@ -1,6 +1,6 @@
 Package.describe({
 	name: 'chillbits:mdl',
-	version: '1.0.0-4',
+	version: '1.0.2-1',
 	// Brief, one-line summary of the package.
 	summary: 'A wrapper package for Google\'s Material Design Lite(with SCSS).',
 	// URL to the Git repository containing the source code for this package.
@@ -14,10 +14,11 @@ Package.onUse(function (api) {
 	api.versionsFrom('1.1.0.2');
 
 	// Add content to head.
-	api.use('templating');
-	api.addFiles('head.html', 'client');
+	//api.use('templating');
+	//api.addFiles('head.html', 'client');
 
 	api.addFiles([
+        'material-icons.css',
 		'envConfigs.js',
 		'material.js',
 		'export.js'

@@ -26,7 +26,7 @@ var handleMutation = function (mutation) {
     case 'childList':
       // Upgrade the new children.
       if (mutation.addedNodes.length > 0 && mutation.target instanceof Element) {
-        componentHandler.upgradeElements(mutation.target, true);
+        componentHandler.upgradeElements(mutation.target);
       }
       break;
     default:
@@ -46,7 +46,7 @@ var mutationObserverBehaviors = {
   'none': function (mutations, observer) {}
 }
 // After some testing, seems like 'fullUpgrade' tends to be more efficient than 'mutationOnly'.
-, activeMutationObserverBehaviorName = 'mutationOnly'
+, activeMutationObserverBehaviorName = 'fullUpgrade'
 , activeMutationObserverBehavior = mutationObserverBehaviors[activeMutationObserverBehaviorName];
 
 // Add public method for switching the mutation observer's behavior.
