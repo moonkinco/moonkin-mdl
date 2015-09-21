@@ -1,10 +1,10 @@
 Package.describe({
 	name: 'chillbits:mdl',
-	version: '1.0.2-1',
+	version: '1.0.4',
 	// Brief, one-line summary of the package.
-	summary: 'A wrapper package for Google\'s Material Design Lite(with SCSS).',
+	summary: 'A wrapper package for Google\'s Material Design Lite.',
 	// URL to the Git repository containing the source code for this package.
-	git: 'https://github.com/Zodiase/meteor-mdl.git',
+	git: 'http://git.chillbits.org/meteor-packages/meteor-mdl-scss.git',
 	// By default, Meteor will default to using README.md for documentation.
 	// To avoid submitting documentation, set this field to null.
 	documentation: 'README.md'
@@ -12,13 +12,9 @@ Package.describe({
 
 Package.onUse(function (api) {
 	api.versionsFrom('1.1.0.2');
-
-	// Add content to head.
-	//api.use('templating');
-	//api.addFiles('head.html', 'client');
-
+	
 	api.addFiles([
-        'material-icons.css',
+		'material-icons.css',
 		'envConfigs.js',
 		'material.js',
 		'export.js'
@@ -29,11 +25,10 @@ Package.onUse(function (api) {
 	], 'client');
 	// Patchers.
 	api.addFiles([
-		'patchers/blaze.js',
-		'patchers/iron-router.js'
+		'patchers/blaze.js'
 	], 'client');
-   // SCSS
-   api.addFiles([
+    // SCSS
+    api.addFiles([
       'mdl/animation/_animation.scss',
       'mdl/badge/_badge.scss',
       'mdl/button/_button.scss',
@@ -65,7 +60,7 @@ Package.onUse(function (api) {
       'mdl/_functions.scss',
       'mdl/_mixins.scss',
       'mdl/_variables.scss',
-   ], 'server', {isAsset:true});
+    ], 'server', {isAsset:true});
 });
 
 Package.onTest(function (api) {
