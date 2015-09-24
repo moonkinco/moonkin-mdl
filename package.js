@@ -12,7 +12,7 @@ Package.describe({
 
 Package.onUse(function (api) {
 	api.versionsFrom('1.1.0.2');
-	
+
 	api.addFiles([
 		'material-icons.css',
 		'envConfigs.js',
@@ -28,7 +28,7 @@ Package.onUse(function (api) {
 		'patchers/blaze.js'
 	], 'client');
     // SCSS
-    api.addFiles([
+    api.addAssets([
       'mdl/animation/_animation.scss',
       'mdl/badge/_badge.scss',
       'mdl/button/_button.scss',
@@ -60,7 +60,7 @@ Package.onUse(function (api) {
       'mdl/_functions.scss',
       'mdl/_mixins.scss',
       'mdl/_variables.scss',
-    ], 'server', {isAsset:true});
+    ], 'server');
 });
 
 Package.onTest(function (api) {
