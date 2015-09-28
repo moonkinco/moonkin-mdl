@@ -11,7 +11,8 @@ Package.describe({
 });
 
 Package.onUse(function (api) {
-	api.versionsFrom('1.1.0.2');
+	api.versionsFrom('METEOR@1.2');
+  api.use('fourseven:scss@3.2.0');
 
 	api.addFiles([
 		'material-icons.css',
@@ -61,6 +62,39 @@ Package.onUse(function (api) {
       'mdl/_mixins.scss',
       'mdl/_variables.scss',
     ], 'server');
+   //  api.addFiles([
+   //    'mdl/animation/_animation.scss',
+   //    'mdl/badge/_badge.scss',
+   //    'mdl/button/_button.scss',
+   //    'mdl/card/_card.scss',
+   //    'mdl/checkbox/_checkbox.scss',
+   //    'mdl/data-table/_data-table.scss',
+   //    'mdl/footer/_mega_footer.scss',
+   //    'mdl/footer/_mini_footer.scss',
+   //    'mdl/grid/_grid.scss',
+   //    'mdl/icon-toggle/_icon-toggle.scss',
+   //    'mdl/layout/_layout.scss',
+   //    'mdl/menu/_menu.scss',
+   //    'mdl/palette/_palette.scss',
+   //    'mdl/progress/_progress.scss',
+   //    'mdl/radio/_radio.scss',
+   //    'mdl/resets/_resets.scss',
+   //    'mdl/resets/_h5bp.scss',
+   //    'mdl/resets/_mobile.scss',
+   //    'mdl/ripple/_ripple.scss',
+   //    'mdl/shadow/_shadow.scss',
+   //    'mdl/slider/_slider.scss',
+   //    'mdl/spinner/_spinner.scss',
+   //    'mdl/switch/_switch.scss',
+   //    'mdl/tabs/_tabs.scss',
+   //    'mdl/textfield/_textfield.scss',
+   //    'mdl/tooltip/_tooltip.scss',
+   //    'mdl/typography/_typography.scss',
+   //    'mdl/_color-definitions.scss',
+   //    'mdl/_functions.scss',
+   //    'mdl/_mixins.scss',
+   //    'mdl/_variables.scss',
+	// ], 'client', {isImport:true});
 });
 
 Package.onTest(function (api) {
